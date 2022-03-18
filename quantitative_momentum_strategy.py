@@ -1,7 +1,6 @@
 """Quantitative Momentum Strategy Script"""
 from time import sleep
 
-import numpy as np
 import pandas as pd
 import requests
 from scipy import stats
@@ -68,6 +67,7 @@ def create_hqm_df(number_of_stocks: int) -> pd.DataFrame:
 
     for idx, stock in enumerate(stocks["Ticker"][:number_of_stocks]):
 
+        # After requesting 5 times, the api blocks our calls during 60 s
         if idx > 4 and idx % 5 == 0:
             sleep(70)
         print(f"Requesting information about stock: {stock}")

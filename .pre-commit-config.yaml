@@ -26,8 +26,8 @@ repos:
     -   id: add-trailing-comma
         args: [--py36-plus]
 
--   repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v3.3.0
-    hooks:
-    -   id: no-commit-to-branch
-        args: ['--branch', 'master', '--branch', 'main', '--branch', 'dev']
+# -   repo: https://github.com/pre-commit/pre-commit-hooks
+#     rev: v3.3.0
+#     hooks:
+#     -   id: no-commit-to-branch
+#         args: ['--branch', 'master', '--branch', 'main', '--branch', 'dev']

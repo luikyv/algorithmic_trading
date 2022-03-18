@@ -1,7 +1,6 @@
 """Qualitative Value Strategy Script"""
 from time import sleep
 
-import numpy as np
 import pandas as pd
 import requests
 from scipy import stats
@@ -55,6 +54,8 @@ def create_rv_df(number_of_stocks: int) -> pd.DataFrame:
     rv_df = pd.DataFrame(columns=rv_cols)
 
     for idx, stock in enumerate(stocks["Ticker"][:number_of_stocks]):
+
+        # After requesting 5 times, the api blocks our calls during 60 s
         if idx > 4 and idx % 5 == 0:
             sleep(65)
         print(f"Requesting information about stock: {stock}")
