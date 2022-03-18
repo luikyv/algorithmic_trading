@@ -1,2 +1,2 @@
 # algorithmic_trading
-Apply trading techniques to evaluate stocks
+Pick the best stocks by evaluating how well they score in different measures
